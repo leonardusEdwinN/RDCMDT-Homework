@@ -41,6 +41,14 @@ class LoginViewController : UIViewController{
                         self.loginErrorMessage.isHidden = true
                         LoadingScreen.sharedInstance.hideIndicator()
                         
+                        //set root view controller
+                        let mainStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+                        let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "homeVC") as! HomeViewController
+                        UIApplication.shared.windows.first?.rootViewController = homeVC
+                        UIApplication.shared.windows.first?.makeKeyAndVisible()
+                        
+                        
+                        self.performSegue(withIdentifier: "goToHome", sender: LoginViewController.self)
                         //masuk ke new controller :
                         print("SUCCESS LOGIN")
                     }else if(status == "ERROR"){
@@ -71,6 +79,10 @@ class LoginViewController : UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToRegister"{
             if let destVC = segue.destination as? RegisterViewController {
+                destVC.modalPresentationStyle = .fullScreen
+            }
+        }else if segue.identifier == "goToHome"{
+            if let destVC = segue.destination as? HomeViewController {
                 destVC.modalPresentationStyle = .fullScreen
             }
         }
