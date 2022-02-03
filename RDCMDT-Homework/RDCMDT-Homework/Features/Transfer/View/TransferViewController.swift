@@ -131,6 +131,11 @@ class TransferViewController : UIViewController{
         navigationView.layer.shadowRadius = 1
         navigationView.layer.shadowOpacity = 5
         
+        
+        transferButton.layer.cornerRadius = 15
+        transferButton.layer.borderColor = UIColor.red.cgColor
+        transferButton.layer.borderWidth = 2
+        
     }
 }
 

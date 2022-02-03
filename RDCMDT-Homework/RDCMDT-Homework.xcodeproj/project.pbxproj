@@ -29,6 +29,7 @@
 		1337EB6627AB850A000E3E5C /* DataPayess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337EB6427AB850A000E3E5C /* DataPayess.swift */; };
 		1337EB6827AB8565000E3E5C /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337EB6727AB8565000E3E5C /* TransferViewModel.swift */; };
 		1337EB6C27AB9A0F000E3E5C /* TransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337EB6B27AB9A0F000E3E5C /* TransferModel.swift */; };
+		1337EB6E27ABB340000E3E5C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1337EB6D27ABB340000E3E5C /* Extensions.swift */; };
 		137E6C3F27A782AB0057EF45 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137E6C3E27A782AB0057EF45 /* Register.storyboard */; };
 		137E6C4127A7830B0057EF45 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137E6C4027A7830B0057EF45 /* RegisterViewController.swift */; };
 		13BCCE3127A6913E00F1FE3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BCCE3027A6913E00F1FE3D /* AppDelegate.swift */; };
@@ -82,6 +83,7 @@
 		1337EB6427AB850A000E3E5C /* DataPayess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPayess.swift; sourceTree = "<group>"; };
 		1337EB6727AB8565000E3E5C /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
 		1337EB6B27AB9A0F000E3E5C /* TransferModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferModel.swift; sourceTree = "<group>"; };
+		1337EB6D27ABB340000E3E5C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		137E6C3E27A782AB0057EF45 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		137E6C4027A7830B0057EF45 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		13BCCE2D27A6913E00F1FE3D /* RDCMDT-Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RDCMDT-Homework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 			children = (
 				1337EB3127AA2975000E3E5C /* Constants.swift */,
 				1337EB3327AA2989000E3E5C /* LoadingScreen.swift */,
+				1337EB6D27ABB340000E3E5C /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				1337EB2F27AA291E000E3E5C /* WebService.swift in Sources */,
 				137E6C4127A7830B0057EF45 /* RegisterViewController.swift in Sources */,
 				1337EB3D27AA4B00000E3E5C /* LoginViewModel.swift in Sources */,
+				1337EB6E27ABB340000E3E5C /* Extensions.swift in Sources */,
 				1337EB3227AA2975000E3E5C /* Constants.swift in Sources */,
 				1337EB6827AB8565000E3E5C /* TransferViewModel.swift in Sources */,
 				1337EB5127AA7EB1000E3E5C /* DataTransaction.swift in Sources */,

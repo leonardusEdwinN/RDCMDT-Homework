@@ -12,7 +12,15 @@ class HomeViewController : UIViewController{
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var buttonLogout: UIButton!
     @IBAction func buttonLogoutPressed(_ sender: Any) {
-       logOut()
+        
+        let alert = UIAlertController(title: "Alert", message: "Are you sure want to log out?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { _ in
+            self.logOut()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        self.present(alert, animated: true,completion: nil)
+        
+       
     }
     
     @IBOutlet weak var informationView: UIView!
@@ -70,6 +78,10 @@ class HomeViewController : UIViewController{
         
         labelAccountNumberValue.text = UserDefaults.standard.string(forKey: "AccountNumber")
         labelAccountHolderName.text = UserDefaults.standard.string(forKey: "Username")
+        
+        makeTransferButton.layer.cornerRadius = 15
+        makeTransferButton.layer.borderColor = UIColor.red.cgColor
+        makeTransferButton.layer.borderWidth = 2
     }
     
     func logOut(){
@@ -90,7 +102,7 @@ class HomeViewController : UIViewController{
             
             self.labelAccountNumberValue.text = balance.accountNo
             if let balance = balance.balance{
-                self.labelCurrencyInformation.text = "SGD \(balance)"
+                self.labelCurrencyInformation.text = "SGD \(balance.formattedWithSeparator)"
             }
         }
         
