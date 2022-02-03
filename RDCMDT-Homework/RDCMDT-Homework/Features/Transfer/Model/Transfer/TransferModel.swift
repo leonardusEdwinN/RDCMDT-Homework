@@ -12,35 +12,32 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct DataTransaction : Codable {
+struct TransferModel : Codable {
+	let status : String?
 	let transactionId : String?
 	let amount : Double?
-	let transactionDate : String?
 	let description : String?
-	let transactionType : String?
-    let receipient : Receipient?
-    let sender : Receipient?
+	let recipientAccount : String?
+    let error : String?
 
 	enum CodingKeys: String, CodingKey {
 
+		case status = "status"
 		case transactionId = "transactionId"
 		case amount = "amount"
-		case transactionDate = "transactionDate"
 		case description = "description"
-		case transactionType = "transactionType"
-        case receipient = "receipient"
-        case sender = "sender"
+        case recipientAccount = "recipientAccount"
+        case error = "error"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
+		status = try values.decodeIfPresent(String.self, forKey: .status)
 		transactionId = try values.decodeIfPresent(String.self, forKey: .transactionId)
 		amount = try values.decodeIfPresent(Double.self, forKey: .amount)
-		transactionDate = try values.decodeIfPresent(String.self, forKey: .transactionDate)
 		description = try values.decodeIfPresent(String.self, forKey: .description)
-		transactionType = try values.decodeIfPresent(String.self, forKey: .transactionType)
-        receipient = try values.decodeIfPresent(Receipient.self, forKey: .receipient)
-        sender = try values.decodeIfPresent(Receipient.self, forKey: .sender)
+        recipientAccount = try values.decodeIfPresent(String.self, forKey: .recipientAccount)
+        error = try values.decodeIfPresent(String.self, forKey: .error)
 	}
 
 }

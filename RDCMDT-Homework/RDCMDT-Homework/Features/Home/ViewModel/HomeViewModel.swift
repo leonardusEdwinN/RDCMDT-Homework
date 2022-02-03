@@ -39,8 +39,8 @@ class HomeViewModel{
                 }
             }
         }
-        
     }
+    
     
     func numberOfRows(_ section: Int) -> Int {
         return transactionsResponseVM.count
@@ -51,6 +51,12 @@ class HomeViewModel{
     }
     
     func getAllTransactions(completion: @escaping (String, [TransactionViewModel]) -> Void){
+        
+        if(transactionsResponseVM.count > 0){
+            //kalau ada data
+            transactionsResponseVM = []
+        }
+        
         let token = UserDefaults.standard.string(forKey: "UserToken")
         
         var urlRequest = URLRequest(url:  Constants.Urls.baseURLWithParam(params: "/transactions"))
@@ -74,12 +80,7 @@ class HomeViewModel{
                                 
                                 self.transactionsResponseVM.append(TransactionViewModel(data: data))
                             }
-                            
-                            
-                            
                         }
-                        
-                        
                         completion(dataDecoder.status ?? "", self.transactionsResponseVM)
                         
                     }

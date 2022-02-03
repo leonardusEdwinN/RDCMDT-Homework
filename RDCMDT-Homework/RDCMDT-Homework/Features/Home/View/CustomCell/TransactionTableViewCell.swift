@@ -41,7 +41,7 @@ class TransactionTableViewCell: UITableViewCell {
         setupUI()
         if transactionType == "transfer"{
             transactionAmmountLabel.textColor = UIColor.red
-        }else{
+        }else if transactionType == "received"{
             transactionAmmountLabel.textColor = UIColor.green
         }
         
