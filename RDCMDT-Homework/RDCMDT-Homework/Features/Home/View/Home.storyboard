@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,24 +46,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123-112-12312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwQ-7k-ZDm">
-                                        <rect key="frame" x="50" y="101.5" width="194" height="21"/>
+                                        <rect key="frame" x="50" y="101.5" width="112.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bl6-PZ-Fw8">
-                                        <rect key="frame" x="254" y="98" width="75" height="28"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="eVs-yQ-N2e"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Copy">
-                                            <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="12"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="copyAccountNumberButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2yF-xB-Yfd"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edwinNiwarlangga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mk-jJ-8L3">
                                         <rect key="frame" x="50" y="159" width="239" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -71,14 +60,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Bl6-PZ-Fw8" firstAttribute="centerY" secondItem="dwQ-7k-ZDm" secondAttribute="centerY" id="0x0-N7-hzJ"/>
                                     <constraint firstItem="bSc-FI-7si" firstAttribute="top" secondItem="Lp5-t3-nl2" secondAttribute="bottom" constant="20" id="5Ox-Xr-plf"/>
                                     <constraint firstAttribute="trailing" secondItem="bSc-FI-7si" secondAttribute="trailing" constant="25" id="6Ui-pv-hTq"/>
                                     <constraint firstAttribute="trailing" secondItem="9mk-jJ-8L3" secondAttribute="trailing" constant="50" id="8BV-z3-m7x"/>
                                     <constraint firstAttribute="trailing" secondItem="eej-Ri-tk5" secondAttribute="trailing" constant="10" id="98Q-B9-Xpl"/>
-                                    <constraint firstAttribute="trailing" secondItem="Bl6-PZ-Fw8" secondAttribute="trailing" constant="10" id="9ep-SQ-vR7"/>
                                     <constraint firstItem="Lp5-t3-nl2" firstAttribute="leading" secondItem="hiH-8j-sCs" secondAttribute="leading" constant="40" id="A7f-9k-PMi"/>
-                                    <constraint firstItem="Bl6-PZ-Fw8" firstAttribute="leading" secondItem="dwQ-7k-ZDm" secondAttribute="trailing" constant="10" id="Arg-VY-Ix5"/>
                                     <constraint firstItem="wFB-Np-Rof" firstAttribute="top" secondItem="dwQ-7k-ZDm" secondAttribute="bottom" constant="20" id="Bzu-Gl-UUA"/>
                                     <constraint firstItem="dwQ-7k-ZDm" firstAttribute="top" secondItem="bSc-FI-7si" secondAttribute="bottom" id="CBR-qi-Oxs"/>
                                     <constraint firstItem="dwQ-7k-ZDm" firstAttribute="leading" secondItem="hiH-8j-sCs" secondAttribute="leading" constant="50" id="FFF-DC-ew9"/>
@@ -96,7 +82,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jks-4d-tyE">
-                                <rect key="frame" x="25" y="329" width="364" height="17.5"/>
+                                <rect key="frame" x="25" y="329" width="259" height="17.5"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -120,32 +106,64 @@
                                     <constraint firstAttribute="trailing" secondItem="Pln-fM-E6r" secondAttribute="trailing" constant="20" id="qfh-ug-Rtv"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p7f-A7-TKA">
-                                <rect key="frame" x="10" y="361.5" width="394" height="500.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p7f-A7-TKA">
+                                <rect key="frame" x="10" y="361.5" width="394" height="435.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVb-FP-wmf">
+                                <rect key="frame" x="15" y="807" width="384" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2XA-Vg-2bf"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Make Transfer">
+                                    <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="makeTransferButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MbD-Ck-0yp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4j-V8-XU6">
+                                <rect key="frame" x="299" y="322.5" width="100" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="81l-se-kM3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                                    <fontDescription key="titleFontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cxU-v5-Fx1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="n4j-V8-XU6" firstAttribute="centerY" secondItem="jks-4d-tyE" secondAttribute="centerY" id="54E-4Y-Q4M"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ucg-Mt-P2L" secondAttribute="trailing" id="81n-Me-aN7"/>
                             <constraint firstItem="jks-4d-tyE" firstAttribute="top" secondItem="hiH-8j-sCs" secondAttribute="bottom" constant="25" id="8iz-78-9TE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sVb-FP-wmf" secondAttribute="trailing" constant="15" id="8xn-ER-C30"/>
                             <constraint firstItem="p7f-A7-TKA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="Bys-Wr-TJr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n4j-V8-XU6" secondAttribute="trailing" constant="15" id="Et5-Xe-GfH"/>
                             <constraint firstItem="ucg-Mt-P2L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FYS-4o-dgu"/>
                             <constraint firstItem="hiH-8j-sCs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ffr-lY-mDt"/>
                             <constraint firstItem="hiH-8j-sCs" firstAttribute="top" secondItem="ucg-Mt-P2L" secondAttribute="bottom" constant="10" id="I3N-cc-eCf"/>
+                            <constraint firstItem="n4j-V8-XU6" firstAttribute="leading" secondItem="jks-4d-tyE" secondAttribute="trailing" constant="15" id="QqI-AO-4Dx"/>
                             <constraint firstItem="p7f-A7-TKA" firstAttribute="top" secondItem="jks-4d-tyE" secondAttribute="bottom" constant="15" id="Y9P-Os-9cF"/>
                             <constraint firstItem="jks-4d-tyE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="caY-Vf-c3l"/>
+                            <constraint firstItem="sVb-FP-wmf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="eVX-4b-Kda"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="p7f-A7-TKA" secondAttribute="trailing" constant="10" id="etJ-tA-nHa"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jks-4d-tyE" secondAttribute="trailing" constant="25" id="iha-vR-qld"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sVb-FP-wmf" secondAttribute="bottom" constant="15" id="njE-u9-Vf3"/>
                             <constraint firstItem="ucg-Mt-P2L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oAp-94-Xf7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="p7f-A7-TKA" secondAttribute="bottom" id="scD-CL-MEl"/>
+                            <constraint firstItem="sVb-FP-wmf" firstAttribute="top" secondItem="p7f-A7-TKA" secondAttribute="bottom" constant="10" id="qps-jZ-eqf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hiH-8j-sCs" secondAttribute="trailing" constant="75" id="zJ1-jd-HwW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonLogout" destination="Pln-fM-E6r" id="afz-uK-s2N"/>
-                        <outlet property="copyAccountNumberButton" destination="Bl6-PZ-Fw8" id="YFb-hD-Tnb"/>
                         <outlet property="informationView" destination="hiH-8j-sCs" id="0qz-vC-w9S"/>
                         <outlet property="labelAccountHolder" destination="wFB-Np-Rof" id="AAZ-eJ-6Rb"/>
                         <outlet property="labelAccountHolderName" destination="9mk-jJ-8L3" id="xZV-bB-EAw"/>
@@ -154,16 +172,32 @@
                         <outlet property="labelCurrencyInformation" destination="Lp5-t3-nl2" id="fI0-EY-P0m"/>
                         <outlet property="labelInfomartion" destination="eej-Ri-tk5" id="PmA-9f-Ck6"/>
                         <outlet property="labelTransactions" destination="jks-4d-tyE" id="oBa-GI-YMX"/>
+                        <outlet property="makeTransferButton" destination="sVb-FP-wmf" id="NKH-cH-kte"/>
                         <outlet property="navigationView" destination="ucg-Mt-P2L" id="gU3-a7-i03"/>
+                        <outlet property="refreshButton" destination="n4j-V8-XU6" id="gaz-MU-HfX"/>
                         <outlet property="transactionsTableView" destination="p7f-A7-TKA" id="L3E-bv-pNn"/>
+                        <segue destination="IsA-TU-0rr" kind="show" identifier="goToTransfer" id="jAm-0I-fDA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
+        <!--transferVC-->
+        <scene sceneID="7ls-Eb-yzz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Transfer" referencedIdentifier="transferVC" id="IsA-TU-0rr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RaY-Xq-L8Y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kw4-Cr-gXG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="-4"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.82352941176470584" green="0.13333333333333333" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

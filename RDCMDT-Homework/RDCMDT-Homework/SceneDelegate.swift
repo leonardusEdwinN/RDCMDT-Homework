@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let alreadyLoggedIn = UserDefaults.standard.string(forKey: "UserToken")
-        
-        if(alreadyLoggedIn != ""){
+        print("alreadyLoggedIn : \(alreadyLoggedIn)")
+        if(alreadyLoggedIn != "" && alreadyLoggedIn != nil){
             let storyBoard = UIStoryboard(name: "Home", bundle: nil)
             self.window?.rootViewController = storyBoard.instantiateViewController(identifier:"homeVC")
             window?.makeKeyAndVisible()

@@ -13,3 +13,4 @@ struct Balance : Codable{
     var balance : Double?
     var error : String?
 }
+
